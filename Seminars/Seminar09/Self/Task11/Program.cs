@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int[] a = new int[n];
+        a[0] = 1;
+        a[1] = 1;
+        for (int i = 2; i < n; ++i) {
+            a[i] = a[i - 2] + a[i - 1];
+        }
+        for (int i = 0; i < n; ++i) {
+            System.Console.Write(a[i] + " ");
+        }
+    }
+}
